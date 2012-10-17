@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<meta name="author" content="Clark/Nikdel/Powell" />
+	<meta name="description" content="">
+	<title>Responsive Lightbox</title>
+	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<style>
+	* {margin:0; padding:0;}
+	img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+	body {
+		padding: 10%;
+	}
+	#lightbox, #lightbox .overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+	}
+	#lightbox {
+		z-index: 9999;
+	}
+	#lightbox .overlay {
+		background-color: rgba(0,0,0,0.7);
+	}
+	#lightbox .box {
+		padding: 5%;
+		margin: 0 auto;
+		position: relative;
+	}
+	#lightbox .box table {
+		height: 100%;
+		margin: 0 auto;
+		border-collapse: collapse;
+	}
+	#lightbox .box td {
+		padding: 0.5em;
+		background-color: #f8f8f8;
+		border-radius: 10px;
+	}
+	@media (max-width:500px) {
+		#lightbox .box td {
+			padding: 0;
+			border-radius: 0;
+		}
+	}
+	@media (max-width:400px) {
+		#lightbox .box {
+			max-width: 100%;
+		}
+	}
+	</style>
+	
+</head>
+
+<body>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta hendrerit nisl sit amet bibendum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam sed sollicitudin urna. Aliquam fringilla convallis quam, at congue libero aliquet id. Vivamus condimentum commodo venenatis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent eleifend odio et tellus luctus faucibus. Nulla vel odio sed justo lacinia accumsan at ut sem. Integer viverra sagittis est, ut posuere mauris tempor eu. Duis tincidunt erat ac orci consequat sodales. In vel dui risus. Sed ac eros arcu, quis mattis nunc. Vestibulum blandit auctor lacus sed sodales. Fusce commodo purus fringilla leo adipiscing facilisis iaculis non leo. Curabitur ut erat sem.</p>
+<p><a href="#">Integer urna</a> tortor, iaculis iaculis pellentesque vel, euismod eu elit. Donec quis nulla eu nibh eleifend malesuada. Maecenas facilisis adipiscing diam in laoreet. Aliquam consectetur tincidunt diam, eu gravida sem accumsan quis. Praesent eget urna sed ipsum congue dignissim quis ut ipsum. Phasellus fringilla cursus urna eu adipiscing. In mauris mauris, volutpat quis sodales a, lacinia non leo. Praesent mollis viverra commodo. Aliquam bibendum sagittis sapien id scelerisque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mauris erat, sollicitudin nec mattis non, congue fermentum ligula. Suspendisse potenti.</p>
+<p>Vivamus consequat blandit commodo. Ut mattis, nisl non vehicula tincidunt, mauris est vehicula lectus, et volutpat mauris felis nec risus. Mauris volutpat dapibus leo, id facilisis tortor fermentum at. Integer porttitor, est eget molestie dictum, mi elit condimentum diam, vitae cursus odio augue nec libero. Nam vel metus in est euismod euismod ac sed est. Maecenas augue ante, laoreet in dignissim in, pulvinar vitae mi. Cras tempus eros gravida magna commodo id aliquam tortor lacinia. Donec iaculis mauris ac diam posuere lobortis. Phasellus facilisis nulla id nisi placerat varius. Sed lorem massa, aliquet volutpat varius vel, scelerisque eu sapien. Vestibulum posuere massa nec ligula facilisis blandit. Morbi risus augue, facilisis dignissim malesuada nec, eleifend eu mauris. Maecenas a massa velit, vel feugiat nisl.</p>
+<p>Pellentesque quis augue at magna mollis sodales sed at elit. Morbi venenatis nibh at dui rutrum vitae congue est semper. Donec varius diam id massa ornare tempor. Etiam at tellus non ipsum egestas scelerisque ac vitae justo. Nam lacinia nibh ut magna porttitor pretium. In lacus purus, pharetra vitae pretium non, scelerisque id sapien. Donec quis dapibus ante. In aliquam, mi eu suscipit elementum, sapien sapien eleifend ipsum, nec fermentum nisi magna at augue. Maecenas pulvinar lacinia metus, nec ultrices libero scelerisque quis. Integer imperdiet fringilla tellus eget venenatis. Cras bibendum augue nec velit pretium at iaculis mauris dapibus. Phasellus blandit, tortor cursus dapibus luctus, augue sapien facilisis justo, et auctor nisl mauris sit amet tortor. Aenean fermentum dignissim tempus. Praesent felis velit, sollicitudin vitae scelerisque vel, sagittis eget sem.</p>
+
+<div id="lightbox">
+<div class="overlay"></div>
+<div class="box">
+<table><tr><td>
+<img src="http://placekitten.com/600/480">
+</td></tr></table>
+</div><!-- box -->
+</div><!-- lightbox -->
+
+</body>
+
+</html>
